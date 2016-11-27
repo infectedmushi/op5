@@ -4798,8 +4798,8 @@ static int synaptics_ts_probe(struct i2c_client *client,
 	TP_FW = CURRENT_FIRMWARE_ID;
 	snprintf(ts->fw_id, 12, "0x%x", TP_FW);
 
-	memset(ts->fw_name, 0, TP_FW_NAME_MAX_LEN);
-	memset(ts->test_limit_name, 0, TP_FW_NAME_MAX_LEN);
+	memset(ts->fw_name,0,TP_FW_NAME_MAX_LEN);
+	memset(ts->test_limit_name,0,TP_FW_NAME_MAX_LEN);
 
 	synaptics_rmi4_i2c_read_block(ts->client, F01_RMI_QUERY11,
 		sizeof(ts->manu_name), ts->manu_name);
